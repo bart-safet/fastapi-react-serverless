@@ -29,7 +29,7 @@ class UserService:
             Created user data
         """
         # Sign up in Cognito
-        cognito_response = await auth_service.sign_up(email, password, profile_data)
+        cognito_response = await auth_service.sign_up(email, password)
         
         # Create user profile in DynamoDB
         user_data = {
